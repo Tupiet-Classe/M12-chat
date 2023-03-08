@@ -1,5 +1,6 @@
 <?php
 
+use App\Events\ChatEvent;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,4 +16,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('/chat', function() {
+    return view('chat');
+});
+
+Route::get('send', function () {
+    ChatEvent::dispatch('hola');
+    return 'sent!';
 });
