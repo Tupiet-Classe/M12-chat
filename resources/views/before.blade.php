@@ -23,7 +23,7 @@
                 .listen('StartChat', (res) => {
                     console.log(res)
 
-                    window.Echo.join('chat-between.' + token.token)
+                    window.Echo.join('chat-between.' + res.token)
                         .here((users) => {
                             console.log(users)
                         })
