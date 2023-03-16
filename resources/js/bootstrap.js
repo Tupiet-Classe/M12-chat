@@ -33,7 +33,14 @@ window.Echo = new Echo({
 
 console.log('hello')
 
-window.Echo.channel("chat")
-    .listen("ChatEvent", (e) => {
-        console.log(e);
-    })
+// let req = await axios.get('/me')
+// let userId = req.data
+
+
+// window.Echo.join('chat.' + userId)
+//     .here((users) => {
+//         console.log('aquests usuaris estan al chat ' + userId, users)
+//     })
+//     .listen('StartChat', (token) => {
+//         console.log(token)
+//     })
