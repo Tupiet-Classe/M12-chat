@@ -19,7 +19,7 @@ Broadcast::channel('App.Models.User.{id}', function ($user, $id) {
 });
 
 Broadcast::channel('chat-between.{token}', function (User $user, string $token) {
-    return true;
+    return ['id' => $user->id, 'name' => $user->name];
 });
 
 Broadcast::channel('chat.{userId}', function (User $user, int $userId) {
