@@ -43,7 +43,8 @@
         })
         const send = () => {
             window.axios.post('/send', {
-                message: id('message').value
+                message: id('message').value,
+                token: 3
             })
         }
     </script>

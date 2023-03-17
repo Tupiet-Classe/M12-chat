@@ -67,8 +67,9 @@ class ChatController extends Controller
         return view('before');
     }
 
+    //TODO: Falta enviar aquest token des del client i ja quasi estaria!
     public function send(Request $request) {
-        NewMessage::dispatch($request->message);
+        NewMessage::dispatch($request->message, $request->token);
         return $request;
     }
 }
